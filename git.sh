@@ -5,7 +5,8 @@ cd ~/Documents/GitOMate
 
 git add .
 
-DATE = $(date) 
+DATE_BIN=$(command -v date)
+DATE=`${DATE_BIN} +%y-%m-%d--%H:%M:%S`
 
 git commit -m "changes made on $DATE"
 
